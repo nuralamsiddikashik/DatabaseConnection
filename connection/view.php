@@ -1,14 +1,17 @@
-<?php 
+<?php
 
-namespace CloudDatabase\Connection;
+namespace Database\Connection;
 
-class View extends \CloudDatabase\Connection\User{
-    public function showAllDatabase(){
-        $datas = $this->getAllUserData(); 
+class View extends \Database\Connection\User
+{
+    public function shoAllDataRecord()
+    {
+        $datas = $this->getAllUser();
 
-        foreach($datas as $data){
-            echo $data['title'] . "<br>";
-            echo $data['name'] . "<br>"; 
+        foreach ($datas as $data) {
+            echo $data['name'] . "\n";
+            echo $data['email'] . "\n";
+            echo $data['phone'] . "\n";
         }
     }
 }

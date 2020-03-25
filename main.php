@@ -1,19 +1,18 @@
-<?php 
+<?php
 
-namespace CloudDatabase; 
+namespace Database;
 
 include_once "autoloader.php";
 
- use \CloudDatabase\Connection\Config; 
- use \CloudDatabase\Connection\User; 
- use \CloudDatabase\Connection\View; 
+use \Database\Connection\View;
 
-class Main{
-
-    public function __construct(){
-        $printData = new View(); 
-        echo $printData->showAllDatabase(); 
+class Main
+{
+    public function __construct()
+    {
+        $printAllData = new View;
+        $printAllData->shoAllDataRecord();
     }
-    
 }
-new Main(); 
+
+new Main();
